@@ -3,19 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run open-browser && next dev -p 3000",
+    "dev": "npm run watch:css && npm run open-browser && next dev -p 3000",
     "open-browser": "start http://localhost:3000",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "build": "npm run build:css && next build",
+    "start": "npm run watch:css && next start",
+    "lint": "next lint",
+    "build:css": "cross-env NODE_ENV=prod postcss ./styles/globals.css -o ./styles/tailwind.css  --minify",
+    "watch:css": "cross-env NODE_ENV=dev  postcss ./styles/globals.css -o styles/tailwind.css"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "next": "12.1.6",
+    "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.1.0",
+    "postcss-preset-env": "^7.7.1",
     "react": "18.1.0",
     "react-dom": "18.1.0"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.7",
     "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6"
+    "eslint-config-next": "12.1.6",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24"
   }
 }
