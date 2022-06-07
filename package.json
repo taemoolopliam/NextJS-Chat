@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "npm run watch:css && npm run open-browser && next dev -p 3000",
     "open-browser": "start http://localhost:3000",
-    "build": "npm run build:css && next build",
-    "start": "npm run watch:css && next build && next export",
+    "build": "npm run build:css && next build && next export",
+    "start": "npm run watch:css && next build ",
     "lint": "next lint",
     "build:css": "cross-env NODE_ENV=prod postcss ./styles/globals.css -o ./styles/tailwind.css  --minify",
     "watch:css": "cross-env NODE_ENV=dev  postcss ./styles/globals.css -o styles/tailwind.css"

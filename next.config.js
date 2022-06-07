@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   optimizeFonts: true,
-  distDir: 'build',
+  // distDir: 'build',
   useFileSystemPublicRoutes: false,
 }
 
