@@ -8,6 +8,6 @@ module.exports = {
       "postcss-preset-env": {
         features: { "nesting-rules": false },
       },
-      ...(process.env.NODE_ENV === "production" ? { cssnano: {} } : {}),
+      ...(process.env.NODE_ENV === "prod" ? { cssnano: {} } : {}),
     },
   };

@@ -6,13 +6,14 @@
     "dev": "npm run watch:css && npm run open-browser && next dev -p 3000",
     "open-browser": "start http://localhost:3000",
     "build": "npm run build:css && next build",
-    "start": "npm run watch:css && next start",
+    "start": "npm run watch:css && next build && next export",
     "lint": "next lint",
     "build:css": "cross-env NODE_ENV=prod postcss ./styles/globals.css -o ./styles/tailwind.css  --minify",
     "watch:css": "cross-env NODE_ENV=dev  postcss ./styles/globals.css -o styles/tailwind.css"
   },
   "dependencies": {
     "cross-env": "^7.0.3",
+    "cssnano": "^5.1.11",
     "next": "12.1.6",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.1.0",
