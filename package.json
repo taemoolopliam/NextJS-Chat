@@ -8,13 +8,19 @@
     "build": "npm run build:css && next build && next export",
     "start": "npm run watch:css && next build ",
     "lint": "next lint",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
     "build:css": "cross-env NODE_ENV=prod postcss ./styles/globals.css -o ./styles/tailwind.css  --minify",
-    "watch:css": "cross-env NODE_ENV=dev  postcss ./styles/globals.css -o styles/tailwind.css"
+    "watch:css": "cross-env NODE_ENV=dev  postcss ./styles/globals.css -o styles/tailwind.css",
+    "find:unused": "next-unused"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^12.1.6",
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.11",
     "next": "12.1.6",
+    "next-unused": "^0.0.6",
     "postcss-cli": "^9.1.0",
     "postcss-import": "^14.1.0",
     "postcss-preset-env": "^7.7.1",
@@ -28,5 +34,11 @@
     "eslint-config-next": "12.1.6",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.0.24"
+  },
+  "next-unused": {
+    "alias": {},
+    "include": ["component"],
+    "exclude": [],
+    "entrypoints": []
   }
 }
