@@ -7,7 +7,7 @@ export default function Chat() {
   function TemplatesChat() {
     return (
       <motion.div animate={{ scale: 1 }} initial={{ scale: 0 }}>
-        <div className=" bg-white w-96 drop-shadow-md rounded-b-lg">
+        <div className=" bg-white w-96 drop-shadow-2xl rounded-b-lg">
           <div className=" bg-blue-600  flex items-center   p-3 text-white font-medium rounded-t-lg">
             <div className="grow text-center ">Demo Live Chat</div>
             <div className="flex-none">
