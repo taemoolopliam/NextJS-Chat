@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 export default function Chat() {
   const [isOpen, setisOpen] = useState(false);
-  const openChat = () => setisOpen(!isOpen);
 
   function FormChat() {
     return (
@@ -15,7 +14,7 @@ export default function Chat() {
               <div
                 className="p-1 hover:bg-blue-500 rounded-md hover:cursor-pointer  "
                 onClick={() => {
-                  openChat();
+                  setisOpen(!isOpen);
                 }}
               >
                 <svg
@@ -85,7 +84,7 @@ export default function Chat() {
         ) : (
           <button
             onClick={() => {
-              openChat();
+              setisOpen(!isOpen);
             }}
             type="button"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none  flex justify-center gap-2 "
