@@ -9,33 +9,31 @@ export default class Chat extends Component {
 
   formChat() {
     return (
-      <>
-        <div className=" bg-white w-96 drop-shadow-md rounded-b-lg">
-          <div className=" bg-blue-600  flex items-center   p-3 text-white font-medium rounded-t-lg">
-            <div className="grow text-center ">Demo Live Chat</div>
-            <div className="flex-none">
-              <div
-                className="p-1 hover:bg-blue-500 rounded-md hover:cursor-pointer  "
-                onClick={() => {
-                  this.openChat();
-                }}
+      <div className=" bg-white w-96 drop-shadow-md rounded-b-lg">
+        <div className=" bg-blue-600  flex items-center   p-3 text-white font-medium rounded-t-lg">
+          <div className="grow text-center ">Demo Live Chat</div>
+          <div className="flex-none">
+            <div
+              className="p-1 hover:bg-blue-500 rounded-md hover:cursor-pointer  "
+              onClick={() => {
+                this.openChat();
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-6 "
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={3}
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-6 "
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={3}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M20 12H4" />
-                </svg>
-              </div>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M20 12H4" />
+              </svg>
             </div>
           </div>
-          {this.contentRegisChat()}
         </div>
-      </>
+        {this.contentRegisChat()}
+      </div>
     );
   }
 
