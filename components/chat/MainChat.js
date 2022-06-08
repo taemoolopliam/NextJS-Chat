@@ -5,7 +5,23 @@ export default function MainChat() {
     // </button>
     <div className="bottom-0 right-0 fixed   z-20 m-5 ">
       <div className=" bg-white w-96 drop-shadow-md rounded-b-lg">
-        <div className=" bg-blue-600  text-center p-2 text-white font-medium rounded-t-lg">Demo Live Chat</div>
+        <div className=" bg-blue-600  flex items-center   p-3 text-white font-medium rounded-t-lg">
+          <div className="grow text-center ">Demo Live Chat</div>
+          <div className="flex-none">
+            <div className="p-1 hover:bg-blue-500 rounded-md hover:cursor-pointer  ">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-6 "
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={3}
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M20 12H4" />
+              </svg>
+            </div>
+          </div>
+        </div>
         <div className="px-5 pt-5">
           <b>*โปรดใส่ชื่อและอีเมลของคุณเพื่อเริ่มคุยกับเรา</b>
           <div className="from-group">
