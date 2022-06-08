@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Chat() {
   const [isOpen, setisOpen] = useState(false);
 
-  function FormChat() {
+  function TemplatesChat() {
     return (
       <motion.div animate={{ scale: 1 }} initial={{ scale: 0 }}>
         <div className=" bg-white w-96 drop-shadow-md rounded-b-lg">
@@ -80,7 +80,7 @@ export default function Chat() {
     <>
       <div className="bottom-0 right-0 fixed   z-20 m-5 ">
         {isOpen ? (
-          <FormChat />
+          <TemplatesChat />
         ) : (
           <button
             onClick={() => {
