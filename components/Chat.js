@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { motion } from "framer-motion";
 
 export default class Chat extends Component {
   state = {
@@ -9,31 +10,33 @@ export default class Chat extends Component {
 
   formChat() {
     return (
-      <div className=" bg-white w-96 drop-shadow-md rounded-b-lg">
-        <div className=" bg-blue-600  flex items-center   p-3 text-white font-medium rounded-t-lg">
-          <div className="grow text-center ">Demo Live Chat</div>
-          <div className="flex-none">
-            <div
-              className="p-1 hover:bg-blue-500 rounded-md hover:cursor-pointer  "
-              onClick={() => {
-                this.openChat();
-              }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-6 "
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={3}
+      <motion.div animate={{ scale: 1 }} initial={{ scale: 0 }}>
+        <div className=" bg-white w-96 drop-shadow-md rounded-b-lg">
+          <div className=" bg-blue-600  flex items-center   p-3 text-white font-medium rounded-t-lg">
+            <div className="grow text-center ">Demo Live Chat</div>
+            <div className="flex-none">
+              <div
+                className="p-1 hover:bg-blue-500 rounded-md hover:cursor-pointer  "
+                onClick={() => {
+                  this.openChat();
+                }}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M20 12H4" />
-              </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-6 "
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={3}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M20 12H4" />
+                </svg>
+              </div>
             </div>
           </div>
+          {this.contentRegisChat()}
         </div>
-        {this.contentRegisChat()}
-      </div>
+      </motion.div>
     );
   }
 
@@ -84,29 +87,31 @@ export default class Chat extends Component {
           {this.state.open ? (
             this.formChat()
           ) : (
-            <button
-              onClick={() => {
-                this.openChat();
-              }}
-              type="button"
-              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none  flex justify-center gap-2 "
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
+            <motion.div whileTap={{ scale: 0.8 }}>
+              <button
+                onClick={() => {
+                  this.openChat();
+                }}
+                type="button"
+                className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none  flex justify-center gap-2 "
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                />
-              </svg>
-              ช่วยเหลือ
-            </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  />
+                </svg>
+                ช่วยเหลือ
+              </button>
+            </motion.div>
           )}
         </div>
       </>
