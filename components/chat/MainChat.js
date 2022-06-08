@@ -4,9 +4,9 @@ export default function MainChat() {
     //   ช่วยเหลือ
     // </button>
     <div className="bottom-0 right-0 fixed   z-20 m-5 ">
-      <div className=" bg-white w-96 drop-shadow-md">
-        <div className=" bg-green-700 text-center p-2 text-white font-medium rounded-t-lg">Demo Live Chat</div>
-        <div className="p-5">
+      <div className=" bg-white w-96 drop-shadow-md rounded-b-lg">
+        <div className=" bg-blue-600  text-center p-2 text-white font-medium rounded-t-lg">Demo Live Chat</div>
+        <div className="px-5 pt-5">
           <b>*โปรดใส่ชื่อและอีเมลของคุณเพื่อเริ่มคุยกับเรา</b>
           <div className="from-group">
             <label htmlFor="email">อีเมล</label>
@@ -31,10 +31,10 @@ export default function MainChat() {
             <textarea name="messages" id="messages" cols="30" rows="5"></textarea>
           </div>
         </div>
-        <div className="py-5  flex justify-end items-center">
+        <div className="p-2 flex justify-end items-center ">
           <button
             type="button"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 focus:outline-none "
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none "
           >
             เริ่มต้นการแชท
           </button>
