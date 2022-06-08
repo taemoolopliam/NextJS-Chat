@@ -2,7 +2,6 @@ import Head from "next/head";
 import PublicLayout from "../components/layouts/public/PublicLayout";
 
 export default function Home() {
-  console.log('message')
   return (
     <PublicLayout>
       <Head>
