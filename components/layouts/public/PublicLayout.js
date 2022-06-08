@@ -1,13 +1,13 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import MainChat from "../../chat/MainChat";
+import Chat from "../../Chat";
 
 export default function publicLayout({ children }) {
   return (
     <>
       <Navbar />
       {children}
-      <MainChat />
+      <Chat />
       <Footer />
     </>
   );

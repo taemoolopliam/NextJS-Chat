@@ -5,6 +5,12 @@ class MyDocument extends Document {
     return (
       <Html lang="th">
         <Head>
+          <meta charSet="UTF-8" />
+          <meta name="description" content="Demo Live Chat" />
+          <meta name="keywords" content="Live Chat,LiveChat for Customer Support" />
+          <meta name="author" content="Sorot Charoensinchai" />
+          <meta name="theme-color" content="#317EFB" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link
@@ -16,7 +22,6 @@ class MyDocument extends Document {
               __html: "body{font-family: 'Sarabun', sans-serif;}",
             }}
           />
-          <meta name="theme-color" content="#317EFB" />
         </Head>
         <body>
           <Main />
