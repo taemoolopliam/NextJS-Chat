@@ -1,8 +1,8 @@
-const withBundleAnalyzer = require('@next/bundle-analyzer')({
-  enabled: process.env.ANALYZE === 'true'
-})
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
 
-module.exports = withBundleAnalyzer({})
+module.exports = withBundleAnalyzer({});
 
 const nextConfig = {
   reactStrictMode: true,
@@ -11,9 +11,9 @@ const nextConfig = {
   // useFileSystemPublicRoutes: false,
   compiler: {
     styledComponents: true,
-    removeConsole: process.env.NODE_ENV === "prod",
+    removeConsole: true,
   },
-  swcMinify: process.env.NODE_ENV === "prod",
+  swcMinify: true,
 };
 
 module.exports = nextConfig;
