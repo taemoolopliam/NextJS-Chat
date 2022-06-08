@@ -19,6 +19,7 @@
     "@next/bundle-analyzer": "^12.1.6",
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.11",
+    "framer-motion": "^6.3.10",
     "next": "12.1.6",
     "next-unused": "^0.0.6",
     "postcss-cli": "^9.1.0",
@@ -37,7 +38,9 @@
   },
   "next-unused": {
     "alias": {},
-    "include": ["component"],
+    "include": [
+      "component"
+    ],
     "exclude": [],
     "entrypoints": []
   }
