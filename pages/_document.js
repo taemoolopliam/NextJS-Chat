@@ -16,6 +16,7 @@ class MyDocument extends Document {
               __html: "body{font-family: 'Sarabun', sans-serif;}",
             }}
           />
+          <meta name="theme-color" content="#317EFB" />
         </Head>
         <body>
           <Main />
