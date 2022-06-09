@@ -2,7 +2,7 @@ import Head from "next/head";
 import PublicLayout from "../components/layouts/public/PublicLayout";
 
 export default function Home() {
-  console.log(process.env.DB_HOST,process.env.NODE_ENV);
+  console.log(process.env.DB_HOST,process.env.NODE_ENV,process.env.API_URL);
   return (
     <PublicLayout>
       <Head>
