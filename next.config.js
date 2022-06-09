@@ -11,9 +11,8 @@ const nextConfig = {
   // useFileSystemPublicRoutes: false,
   compiler: {
     styledComponents: true,
-    removeConsole: true,
+    removeConsole: false,
   },
-  swcMinify: true,
 };
 
 module.exports = nextConfig;
