@@ -1,0 +1,22 @@
+[
+  {
+    "categoryID": "01",
+    "categoryName": "ติดต่อสอบถามใช้งานระบบ"
+  },
+  {
+    "categoryID": "02",
+    "categoryName": "รายงานปัญหา"
+  },
+  {
+    "categoryID": "03",
+    "categoryName": "ติดตามสถานะยืนยันตัวตน"
+  },
+  {
+    "categoryID": "04",
+    "categoryName": "แจ้งลบบัญชีผู้ใช้งาน"
+  },
+  {
+    "categoryID": "05",
+    "categoryName": "อื่นๆ"
+  }
+]
