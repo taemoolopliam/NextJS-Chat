@@ -16,6 +16,7 @@
     "find:unused": "next-unused"
   },
   "dependencies": {
+    "@microsoft/signalr": "^6.0.7",
     "@next/bundle-analyzer": "^12.1.6",
     "cross-env": "^7.0.3",
     "cssnano": "^5.1.11",

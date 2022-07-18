@@ -5,7 +5,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 module.exports = withBundleAnalyzer({});
 
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   optimizeFonts: true,
   // distDir: 'build',
   // useFileSystemPublicRoutes: false,
